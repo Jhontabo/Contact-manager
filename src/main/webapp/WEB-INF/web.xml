@@ -6,22 +6,19 @@
                         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
     version="4.0">
 
-    <!-- Nombre de la aplicación -->
     <display-name>ContactManager</display-name>
 
-    <!-- Declaración del servlet controlador -->
+    <!-- Solo listar contactos -->
     <servlet>
-        <servlet-name>ContactController</servlet-name>
-        <servlet-class>com.contactmanager.controller.ContactController</servlet-class>
+        <servlet-name>ListContact</servlet-name>
+        <servlet-class>com.contactmanager.controller.ListContactServlet</servlet-class>
     </servlet>
-
-    <!-- Mapeo de URL al servlet -->
     <servlet-mapping>
-        <servlet-name>ContactController</servlet-name>
+        <servlet-name>ListContact</servlet-name>
         <url-pattern>/contacts</url-pattern>
     </servlet-mapping>
 
-    <!-- Página de bienvenida por defecto (puedes crear index.jsp en webapp/) -->
+    <!-- Página de bienvenida: index.jsp -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

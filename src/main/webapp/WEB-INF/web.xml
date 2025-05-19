@@ -16,7 +16,22 @@
     <servlet-mapping>
         <servlet-name>ListContact</servlet-name>
         <url-pattern>/contacts</url-pattern>
-    </servlet-mapping>
+  </servlet-mapping>
+
+    <servlet>
+    <servlet-name>CreateContact</servlet-name>
+    <servlet-class>com.contactmanager.controller.CreateContactServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CreateContact</servlet-name>
+    <url-pattern>/contacts/new</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CreateContact</servlet-name>
+    <url-pattern>/contacts/create</url-pattern>
+  </servlet-mapping>
 
     <!-- Página de bienvenida: index.jsp -->
     <welcome-file-list>

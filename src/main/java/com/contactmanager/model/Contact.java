@@ -12,33 +12,34 @@ public class Contact {
     private String email;
     private String phone;
 
-    /*
-     *Constructor vacio
-     */
+    // Constructor vacío (por si acaso)
     public Contact() {
-        // Generamos un UUID único por defecto:
         this.id = UUID.randomUUID().toString();
     }
 
-    /**
-     * Constructor completo.
-     * @param name   Nombre del contacto
-     * @param email  Email del contacto
-     * @param phone  Teléfono del contacto
-     */
+    // Constructor usado para cargar desde el archivo (con id conocido)
     public Contact(String id ,String name, String email, String phone) {
-        this.id=id;
+        this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
     }
 
-    // Getters y setters
+    // NUEVO: Constructor para nuevos contactos (id se genera solo)
+    public Contact(String name, String email, String phone) {
+        this.id = UUID.randomUUID().toString();
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    // Getters y setters...
+
     public String getId() {
         return id;
     }
+    // No hay setter de id para evitar cambios accidentales
 
-    // No hay setter de ID para evitar cambios accidentales
     public String getName() {
         return name;
     }

@@ -33,6 +33,38 @@
     <url-pattern>/contacts/create</url-pattern>
   </servlet-mapping>
 
+<servlet>
+  <servlet-name>DetailsContact</servlet-name>
+  <servlet-class>com.contactmanager.controller.DetailsContactServlet</servlet-class>
+  </servlet>
+
+<servlet-mapping>
+  <servlet-name>DetailsContact</servlet-name>
+  <url-pattern>/contacts/details</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>EditContact</servlet-name>
+    <servlet-class>com.contactmanager.controller.EditContactServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>EditContact</servlet-name>
+    <url-pattern>/contacts/edit</url-pattern>
+  </servlet-mapping>
+
+<servlet>
+    <servlet-name>DeleteContact</servlet-name>
+    <servlet-class>com.contactmanager.controller.DeleteContactServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DeleteContact</servlet-name>
+    <url-pattern>/contacts/delete</url-pattern>
+</servlet-mapping>
+
+
     <!-- Página de bienvenida: index.jsp -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
